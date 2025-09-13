@@ -1,10 +1,11 @@
-Daos Docker Learning
-
 📘 My Learning Journey: DAOS, Docker, and Storage Systems
+
 This document summarizes my hands-on learnings and implementation experience over the last month with DAOS (Distributed Asynchronous Object Storage), Docker/Kubernetes environments, and related storage and operating system concepts. It is meant to act as a structured knowledge base and portfolio entry for GitHub.
 
 🔹 Topics I Learned
+
 1. DAOS (Distributed Asynchronous Object Storage)
+
 DAOS Installation & Setup
 
 Built DAOS from source (v2.4 and v2.6 releases).
@@ -52,6 +53,7 @@ Corrected certificate and path mismatches.
 Learned about DER_MISC(-1025) and transport config debugging.
 
 2. Docker & Kubernetes
+
 Docker for DAOS
 
 Used docker-compose to bring up DAOS server/client/admin environments.
@@ -75,6 +77,7 @@ Explored how DAOS services can be mapped to Kubernetes pods.
 Understood DAOS servers as StatefulSets, agents as DaemonSets, and control/admin as Deployments.
 
 3. Storage Concepts
+
 Object Storage vs POSIX Storage
 
 Learned how DAOS supports both S3 (object) and POSIX (via DFuse) interfaces.
@@ -100,6 +103,7 @@ BIO errors (storage device mismatches) and how to align configs.
 Network and CPU warnings and their impact on storage services.
 
 4. Versity Gateway (S3 on DAOS)
+
 Installed Versity Gateway on Linux.
 
 Configured it to run in POSIX mode pointing to a DFuse mount.
@@ -109,6 +113,7 @@ Started S3 gateway on custom ports and tested connectivity.
 Configured AWS CLI on both host and container to interact with S3 endpoint.
 
 5. OS and Storage-Related Topics
+
 Linux Filesystem Management
 
 Created/mounted directories for DAOS storage.
@@ -128,6 +133,7 @@ Used systemctl, journalctl, and docker logs for service debugging.
 Learned to stop/start DAOS management services using daos-cm.sh.
 
 🚀 Implementation Flow I Learned
+
 Build DAOS from source and verify CLI tools.
 
 Deploy DAOS server/admin/client via Docker.
@@ -143,6 +149,7 @@ Deploy Versity Gateway on top of DFuse mount.
 Connect external clients (AWS CLI) to access DAOS via S3.
 
 ✅ Outcomes
+
 Successfully installed and ran DAOS (v2.6) on Ubuntu.
 
 Learned to manage DAOS pools, containers, and POSIX mounts.
@@ -154,6 +161,7 @@ Deployed Versity Gateway for S3 access on top of DAOS.
 Gained practical knowledge of storage concepts, errors, and debugging.
 
 📂 Next Steps
+
 Explore Kubernetes-native deployment of DAOS.
 
 Automate DAOS setup with Helm charts.
@@ -161,5 +169,4 @@ Automate DAOS setup with Helm charts.
 Benchmark DAOS performance for POSIX vs S3 workloads.
 
 Learn about erasure coding, replication, and DAOS fault tolerance.
-
 
